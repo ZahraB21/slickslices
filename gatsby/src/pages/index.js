@@ -1,9 +1,11 @@
 import React from 'react';
+import Nav from '../components/Nav';
 
-export default function home() {
-    return (
-        <div>
-            <p>Hello from the home page</p>
-        </div>
-    );
+export default function HomePage() {
+  return (
+    <div>
+      <Nav />
+      <p>Hello from the home page</p>
+    </div>
+  );
 }
