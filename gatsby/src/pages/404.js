@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function fourOhFourPage(){
+export default function fourOhFourPage() {
     return (
-        <div>
+        <> // react fragment
             <p>This page cannot be found.</p>
-        </div>
+        </>
     );
 }
