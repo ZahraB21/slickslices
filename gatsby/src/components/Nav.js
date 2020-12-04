@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link, navigate } from 'gatsby';
 import Styles from 'styled-components';
+import Logo from './Logo';
 
 const NavStyles = Styles.nav`
   margin-bottom: 3rem;
+  .logo{
+    transform: translateY(-25%);
+  }
   ul{
     margin: 0;
     padding: 0;
@@ -33,6 +37,13 @@ const NavStyles = Styles.nav`
       --rotate: 3deg;
     }
   }
+  a{
+    font-size: 3rem;
+    text-decoration: none;
+    &:hover {
+      color: var(--red);
+    }
+  }
 `;
 
 function goToPizzasPage() {
@@ -53,10 +64,12 @@ export default function Nav() {
           <Link to="/">Pizza Menu</Link>
         </li>
         <li>
-          <Link to="/slicemasters">Slice Master</Link>
+          <Link to="/">
+            <Logo />
+          </Link>
         </li>
         <li>
-          <Link to="/">Logo</Link>
+          <Link to="/slicemasters">Slice Master</Link>
         </li>
         <li>
           <Link to="/order">Order Ahead</Link>
