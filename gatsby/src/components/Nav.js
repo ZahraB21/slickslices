@@ -3,14 +3,35 @@ import { Link, navigate } from 'gatsby';
 import Styles from 'styled-components';
 
 const NavStyles = Styles.nav`
-  margin: 0;
-  padding: 0;
+  margin-bottom: 3rem;
   ul{
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr auto 1fr 1fr;
     list-style: none;
     text-align: center;
     align-items: center;
+    grid-gap: 2rem;
+  }
+  li {
+    --rotate: -2deg;
+    transform: rotate(var(--rotate));
+    order: 1;
+    
+    &:nth-child(1) {
+      --rotate: 1deg;
+    }
+    &:nth-child(2) {
+      --rotate: -2.5deg;
+    }
+    &:nth-child(4) {
+      --rotate: 2.5deg;
+    }
+
+    &:hover {
+      --rotate: 3deg;
+    }
   }
 `;
 
@@ -26,13 +47,19 @@ export default function Nav() {
     <NavStyles>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Hot Now</Link>
+        </li>
+        <li>
+          <Link to="/">Pizza Menu</Link>
         </li>
         <li>
           <Link to="/slicemasters">Slice Master</Link>
         </li>
         <li>
-          <Link to="/order">Orders</Link>
+          <Link to="/">Logo</Link>
+        </li>
+        <li>
+          <Link to="/order">Order Ahead</Link>
         </li>
         <li>
           <button type="button" onClick={goToPizzasPage}>
