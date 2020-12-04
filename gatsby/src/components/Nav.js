@@ -1,5 +1,18 @@
 import React from 'react';
 import { Link, navigate } from 'gatsby';
+import Styles from 'styled-components';
+
+const NavStyles = Styles.nav`
+  margin: 0;
+  padding: 0;
+  ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr auto 1fr 1fr;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+  }
+`;
 
 function goToPizzasPage() {
   setTimeout(() => {
@@ -10,7 +23,7 @@ function goToPizzasPage() {
 
 export default function Nav() {
   return (
-    <nav>
+    <NavStyles>
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -27,6 +40,6 @@ export default function Nav() {
           </button>
         </li>
       </ul>
-    </nav>
+    </NavStyles>
   );
 }
