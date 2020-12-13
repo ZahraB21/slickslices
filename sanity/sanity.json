@@ -1,19 +1,18 @@
 {
   "root": true,
-  "api": {
-    "projectId": "kutp3su7",
-    "dataset": "production"
-  },
   "project": {
-    "name": "slicks-slices"
+    "name": "slick-slices-jana"
+  },
+  "api": {
+    "projectId": "u050pku7",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
     "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool",
-    "@sanity/google-maps-input"
+    "@sanity/desk-tool"
   ],
   "env": {
     "development": {
