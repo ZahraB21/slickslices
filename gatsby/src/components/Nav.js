@@ -17,6 +17,7 @@ const NavStyles = Styles.nav`
     text-align: center;
     align-items: center;
     grid-gap: 2rem;
+    margin-top: -6rem;
   }
   li {
     --rotate: -2deg;
@@ -43,6 +44,9 @@ const NavStyles = Styles.nav`
     &:hover {
       color: var(--red);
     }
+    &[aria-current="page"]{
+      color: var(--red);
+    }
   }
 `;
 
@@ -61,7 +65,7 @@ export default function Nav() {
           <Link to="/">Hot Now</Link>
         </li>
         <li>
-          <Link to="/">Pizza Menu</Link>
+          <Link to="/pizzas">Pizza Menu</Link>
         </li>
         <li>
           <Link to="/">
